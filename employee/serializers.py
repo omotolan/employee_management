@@ -13,10 +13,11 @@ class EmployeeSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Employee
-        fields = ('first_name', 'last_name', 'email', 'age', 'department',
-                  'gender', 'salary', 'is_suspended',
-                  'date_joined'
-                  )
+        fields = '__all__'
+        # fields = ('first_name', 'last_name', 'email', 'age', 'department_id',
+        #           'gender', 'salary', 'is_suspended',
+        #           'date_joined'
+        #           )
 # class PizzaSerializer(serializers.ModelSerializer):
 #     order = OrderSummarySerializer(read_only=True)
 #     box = BoxSerializer(read_only=True)
