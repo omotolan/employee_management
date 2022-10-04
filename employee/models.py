@@ -28,7 +28,7 @@ class Employee(models.Model):
     last_name = models.CharField(max_length=15)
     email = models.EmailField(unique=True)
     age = models.PositiveSmallIntegerField()
-    departments = models.ForeignKey(Department, null=True, on_delete=models.SET_NULL, blank=False)
+    department = models.ForeignKey(Department, null=True, on_delete=models.SET_NULL, blank=False)
     gender = models.CharField(max_length=10, choices=GENDER)
     salary = models.DecimalField(max_digits=9, decimal_places=2)
     is_suspended = models.BooleanField(default=False)
